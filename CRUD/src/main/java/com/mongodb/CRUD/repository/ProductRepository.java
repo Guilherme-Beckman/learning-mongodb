@@ -3,9 +3,9 @@ package com.mongodb.CRUD.repository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.mongodb.CRUD.model.user.User;
+import com.mongodb.CRUD.model.product.Product;
 
 @Repository
-public interface UserRepository extends MongoRepository<User, String>{
+public interface ProductRepository extends MongoRepository<Product, String>{
 
 }

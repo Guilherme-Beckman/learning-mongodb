@@ -1,13 +1,12 @@
 package com.mongodb.CRUD.service;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mongodb.CRUD.model.User;
-import com.mongodb.CRUD.model.UserDTO;
-import com.mongodb.CRUD.model.exceptions.UserNotFoundException;
+import com.mongodb.CRUD.model.user.User;
+import com.mongodb.CRUD.model.user.UserDTO;
+import com.mongodb.CRUD.model.user.exceptions.UserNotFoundException;
 import com.mongodb.CRUD.repository.UserRepository;
 
 @Service

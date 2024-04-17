@@ -1,4 +1,7 @@
-package com.mongodb.CRUD.model;
+package com.mongodb.CRUD.model.user;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -6,20 +9,22 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "users")
 public class User {
 @Id
-public String id;
-public String email;
-public Integer cpf;
+private String id;
+private String email;
+private Integer cpf;
+private List<String> productsOwned;
 public User() {
 }
 public User(UserDTO userDTO) {
 	this.email= userDTO.email();
 	this.cpf = userDTO.cpf();
+	this.productsOwned = new ArrayList<String>();
 }
 public User(String id, String email, Integer cpf) {
-	super();
 	this.id = id;
 	this.email = email;
 	this.cpf = cpf;
+	this.productsOwned = new ArrayList<String>();
 }
 public String getId() {
 	return id;
@@ -38,6 +43,12 @@ public Integer getCpf() {
 }
 public void setCpf(Integer cpf) {
 	this.cpf = cpf;
+}
+public List<String> getProductsOwned() {
+	return productsOwned;
+}
+public void setProductsOwned(List<String> productsOwned) {
+	this.productsOwned = productsOwned;
 }
 
 }

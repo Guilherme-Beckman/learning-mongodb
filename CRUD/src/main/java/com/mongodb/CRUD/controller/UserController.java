@@ -1,7 +1,6 @@
 package com.mongodb.CRUD.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mongodb.CRUD.model.User;
-import com.mongodb.CRUD.model.UserDTO;
+import com.mongodb.CRUD.model.user.User;
+import com.mongodb.CRUD.model.user.UserDTO;
 import com.mongodb.CRUD.service.UserService;
 
 @RestController
